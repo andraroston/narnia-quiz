@@ -68,7 +68,7 @@ var currentTurn = 0;
 
 
 //to add to the counter at the bottom right
-var counter = 0;
+var counter = 1;
 var counting = function(){
 	counter += 1;
 	$('#count').replaceWith("<span id='count'>" + counter + "</span>");
@@ -79,12 +79,9 @@ var gamePlay = function() {
 	
 //	making sure the user has made a choice
 
-	if(counter < 10 && ($('input[name=choice]:checked').length > 0)) {
+	if(currentTurn < 10 && ($('input[name=choice]:checked').length > 0)) {
 	counting();
-	}
-	else{
-		alert("Please choose an answer!");
-	}
+	
 
 //	getting the value of the user choice
 
@@ -101,6 +98,10 @@ var gamePlay = function() {
 	};	
 
 	userScoring();
+	}
+	else{
+		alert("Please choose an answer!");
+	}
 
 };
 
@@ -115,13 +116,17 @@ $("#submitButton").on("click", function() {
 	if (currentTurn < 10) {
 		$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[currentTurn].question + "</h2>");
 		//set radio buttons to next turn
-	} else {
-	$("#possibleAnswers").find("ul").hide();
-	$('#finalScore').replaceWith("<span id='finalScore'>" + userScore + "</span>")
-	$("#possibleAnswers").find("h3").show();
-	$("#question").replaceWith("<h2 id = 'question'>" + "All done! Your score is..." + "</h2>");
 	}
 
+
+	else {
+	$("#possibleAnswers").find("ul").hide();
+	$('#finalScore').replaceWith("<span id='finalScore'>" + userScore + "</span>").fadeIn(1000);
+	$("#possibleAnswers").find("h3").fadeIn(1000);
+	$("#question").replaceWith("<h2 id = 'question'>" + "All done! Your score is..." + "</h2>").fadeIn(1000);
+	$('#count').replaceWith("<span id='count'>" + "1" + "</span>");
+};
+	
 });
 
 
@@ -130,9 +135,9 @@ $("#newGame").on("click", function(){
 	console.log("New Game Button Clicked")
 	currentTurn = 0;
 	userScore = 0;
-	counter = 0;
+	counter = 1;
 	$('#count').replaceWith("<span id='count'>" + counter + "</span>")
-	$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[currentTurn].question + "</h2>")
-	//reset radio buttons back to turn 0
+	$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[0].question + "</h2>")
+	//put radio buttons back, and reset radio buttons back to turn 0
 	});
 })

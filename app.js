@@ -85,20 +85,21 @@ var gamePlay = function() {
 
 //	getting the value of the user choice
 
-	var userChoice = $('input[name=choice]:checked').val()
-		console.log(userChoice);
+		var userChoice = $('input[name=choice]:checked').val()
+			console.log(userChoice);
 
-//  to add one point to user score if answer is correct
-	var userScoring = function() {
-			if(userChoice === allQuestions[currentTurn].correctAnswer) {
-			userScore += 1
-		};
-	console.log(userScore);
- 	currentTurn += 1;	
-	};	
+	//  to add one point to user score if answer is correct
+		var userScoring = function() {
+				if(userChoice === allQuestions[currentTurn].correctAnswer) {
+				userScore += 1
+			};
+		console.log(userScore);
+	 	currentTurn += 1;	
+		};	
 
-	userScoring();
-	}
+		userScoring();
+		}
+
 	else{
 		alert("Please choose an answer!");
 	}
@@ -115,7 +116,10 @@ $("#submitButton").on("click", function() {
 // how to load next question and or final score
 	if (currentTurn < 10) {
 		$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[currentTurn].question + "</h2>");
-		//set radio buttons to next turn
+		$("#choice1").replaceWith("<li id = 'choice1'>" + "<input type='radio' name='choice' value='" +allQuestions[currentTurn].possibleAnswers[0]+ "'>" +allQuestions[currentTurn].possibleAnswers[0]+ "</li>");
+		$("#choice2").replaceWith("<li id = 'choice2'>" + "<input type='radio' name='choice' value='" +allQuestions[currentTurn].possibleAnswers[1]+ "'>" +allQuestions[currentTurn].possibleAnswers[1]+ "</li>");
+		$("#choice3").replaceWith("<li id = 'choice3'>" + "<input type='radio' name='choice' value='" +allQuestions[currentTurn].possibleAnswers[2]+ "'>" +allQuestions[currentTurn].possibleAnswers[2]+ "</li>");
+		$("#choice4").replaceWith("<li id = 'choice4'>" + "<input type='radio' name='choice' value='" +allQuestions[currentTurn].possibleAnswers[3]+ "'>" +allQuestions[currentTurn].possibleAnswers[3]+ "</li>");
 	}
 
 
@@ -138,6 +142,11 @@ $("#newGame").on("click", function(){
 	counter = 1;
 	$('#count').replaceWith("<span id='count'>" + counter + "</span>")
 	$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[0].question + "</h2>")
-	//put radio buttons back, and reset radio buttons back to turn 0
+	$("#possibleAnswers").find("h3").hide();
+	$("#choice1").replaceWith("<li id = 'choice1'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[0]+ ">" +allQuestions[0].possibleAnswers[0]+ "</li>");
+	$("#choice2").replaceWith("<li id = 'choice2'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[1]+ ">" +allQuestions[0].possibleAnswers[1]+ "</li>");
+	$("#choice3").replaceWith("<li id = 'choice3'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[2]+ ">" +allQuestions[0].possibleAnswers[2]+ "</li>");
+	$("#choice4").replaceWith("<li id = 'choice4'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[3]+ ">" +allQuestions[0].possibleAnswers[3]+ "</li>");
+	$("#possibleAnswers").find("ul").fadeIn('fast');
 	});
 })

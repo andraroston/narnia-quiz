@@ -50,174 +50,34 @@ table {
 
 body {
 	background: no-repeat center center fixed;
-	background-image: url("images/book.jpg");
+	background-image: url("images/Book.jpg");
 	background-size: cover;
-}	
+}
+
+	
+
+#theGame {
+	text-align: center;
+}
 
 header {
 	text-align: center;
 	font-size: 70px;
-	margin-top: 5%;
+	margin-top: 3%;
 	font-family: "Allura";
 	color: #262626;
 }
 
-#theGame {
-	text-align: center;
-	min-width: 125px;
-}
-
 h2 {
 	font-size: 50px;
-	margin-top: 3%;
+	margin-top: 2%;
 	margin-bottom: 1%;
 	font-family: "Amatic SC";
 	color: #262626;
 }
 
 #possibleAnswers {
-	padding: 1%;
-	margin: 1% 35% 1% 35%;
-	border: 2px solid black;
-	border-radius: 25px;
-	font-size: 40px;
-	font-family: "Amatic SC";
-	background-color: rgba(236, 252, 212, 0.4);
-	color: #262626;	
-}
-
-input[type=radio] {
-	height: 25px;
-	width: 25px;
-	vertical-align: middle;
-	border-radius: 1px;
-
-}
-
-#submitButton {
-	padding: 1%;
-	border: 2px solid black;
-	border-radius: 10px;
-	font-size: 30px;
-	font-family: "Amatic SC";
-	background-color: rgba(236, 252, 212, 0.4);
-	color: #262626;
-}
-
-footer {
-	position: absolute;
-	clear: all;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	color: #262626;
-}
-
-footer div {
-	display: inline-block;
-	margin: 2%;
-	text-align: center;
-	padding: 1%;
-	border: 2px solid black;
-	border-radius: 15px;
-	font-size: 25px;
-	font-family: "Amatic SC";
-	background-color: rgba(236, 252, 212, 0.4);	
-}
-
-footer button {
-	display: inline-block;
-	margin: 2%;
-	text-align: center;
-	padding: 1%;
-	border: 2px solid black;
-	border-radius: 15px;
-	font-size: 25px;
-	font-family: "Amatic SC";
-	background-color: rgba(236, 252, 212, 0.4);
-}
-
-#footright {
-	float: right;
-}/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* my CSS starts here */
-
-body {
-	background: no-repeat center center fixed;
-	background-image: url("images/book.jpg");
-	background-size: cover;
-}	
-
-header {
-	text-align: center;
-	font-size: 70px;
-	margin-top: 5%;
-	font-family: "Allura";
-	color: #262626;
-}
-
-#theGame {
-	text-align: center;
-	min-width: 125px;
-}
-
-h2 {
-	font-size: 50px;
-	margin-top: 3%;
-	margin-bottom: 1%;
-	font-family: "Amatic SC";
-	color: #262626;
-}
-
-#possibleAnswers {
-	padding: 1%;
+	padding: 2%;
 	margin: 1% 35% 1% 35%;
 	border: 2px solid black;
 	border-radius: 25px;
@@ -225,8 +85,8 @@ h2 {
 	font-family: "Amatic SC";
 	background-color: rgba(236, 252, 212, 0.4);
 	color: #262626;
-	min-height: 160px;
-
+	
+	
 }
 
 h3 {
@@ -240,8 +100,6 @@ input[type=radio] {
 	width: 25px;
 	vertical-align: middle;
 	border-radius: 1px;
-
-
 }
 
 #submitButton {
@@ -252,39 +110,39 @@ input[type=radio] {
 	font-family: "Amatic SC";
 	background-color: rgba(236, 252, 212, 0.4);
 	color: #262626;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 footer {
-	position: absolute;
-	clear: all;
 	width: 100%;
-	bottom: 0;
-	left: 0;
-	color: #262626;
 }
+
 
 footer div {
 	display: inline-block;
-	margin: 2%;
+	margin: 1%;
 	text-align: center;
-	padding: 1%;
+	padding: 1% 2% 1% 2%;
 	border: 2px solid black;
 	border-radius: 15px;
 	font-size: 25px;
 	font-family: "Amatic SC";
 	background-color: rgba(236, 252, 212, 0.4);	
+	color: #262626
 }
 
 footer button {
 	display: inline-block;
-	margin: 2%;
+	margin: 1%;
 	text-align: center;
-	padding: 1%;
+	padding: 1% 2% 1% 2%;
 	border: 2px solid black;
 	border-radius: 15px;
 	font-size: 25px;
 	font-family: "Amatic SC";
 	background-color: rgba(236, 252, 212, 0.4);
+	color: #262626
 }
 
 #footright {

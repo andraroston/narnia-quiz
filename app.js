@@ -85,17 +85,18 @@ var gamePlay = function() {
 
 //	getting the value of the user choice
 
-		var userChoice = $('input[name=choice]:checked').val()
+		var userChoice = $('input[name=choice]:checked').val();
 			console.log(userChoice);
 
 	//  to add one point to user score if answer is correct
 		var userScoring = function() {
 				if(userChoice === allQuestions[currentTurn].correctAnswer) {
-				userScore += 1
-			};
-		console.log(userScore);
-	 	currentTurn += 1;	
-		};	
+				userScore += 1;
+				console.log(userScore);
+				}
+			currentTurn += 1;	
+	 		console.log(currentTurn);
+			};	
 
 		userScoring();
 		}
@@ -129,19 +130,19 @@ $("#submitButton").on("click", function() {
 	$("#possibleAnswers").find("h3").fadeIn(1000);
 	$("#question").replaceWith("<h2 id = 'question'>" + "All done! Your score is..." + "</h2>").fadeIn(1000);
 	$('#count').replaceWith("<span id='count'>" + "1" + "</span>");
-};
+}
 	
 });
 
 
 //what happens when user clicks new game button
 $("#newGame").on("click", function(){
-	console.log("New Game Button Clicked")
+	console.log("New Game Button Clicked");
 	currentTurn = 0;
 	userScore = 0;
 	counter = 1;
-	$('#count').replaceWith("<span id='count'>" + counter + "</span>")
-	$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[0].question + "</h2>")
+	$('#count').replaceWith("<span id='count'>" + counter + "</span>");
+	$("#question").replaceWith("<h2 id = 'question'>" + allQuestions[0].question + "</h2>");
 	$("#possibleAnswers").find("h3").hide();
 	$("#choice1").replaceWith("<li id = 'choice1'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[0]+ ">" +allQuestions[0].possibleAnswers[0]+ "</li>");
 	$("#choice2").replaceWith("<li id = 'choice2'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[1]+ ">" +allQuestions[0].possibleAnswers[1]+ "</li>");
@@ -149,4 +150,4 @@ $("#newGame").on("click", function(){
 	$("#choice4").replaceWith("<li id = 'choice4'>" + "<input type='radio' name='choice' value=" +allQuestions[0].possibleAnswers[3]+ ">" +allQuestions[0].possibleAnswers[3]+ "</li>");
 	$("#possibleAnswers").find("ul").fadeIn('fast');
 	});
-})
+});

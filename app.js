@@ -21,7 +21,7 @@ var	allQuestions = [
 		},
 		    {
 	        number: 4,
-			question: "In what country is the actual town Narina is named after?",
+			question: "Narnia was named after a real town. Where is it?",
 			possibleAnswers: ["France", "Italy", "USA", "Fiji"],
 			correctAnswer: "Italy"
 		},
@@ -110,7 +110,7 @@ var gamePlay = function() {
 
 //what happens when user clicks submit button
 $("#submitButton").on("click", function() {
-	event.preventDefault();
+	event.preventDefault(event);
 	console.log("Submit Button Clicked");
 	gamePlay();
 

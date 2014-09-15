@@ -116,6 +116,11 @@ input[type=radio] {
 
 footer {
 	width: 100%;
+	position: fixed;
+	clear: all;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 }
 
 
